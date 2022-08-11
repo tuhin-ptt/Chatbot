@@ -1,0 +1,5 @@
+pip install flask
+pip install wikipedia
+pip install wmi
+pip install pyautogui
+pip install tensorflow==2.8.2

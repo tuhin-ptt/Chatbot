@@ -5,18 +5,8 @@ def reply(query):
     query = query.replace("?", " ?")
     query = query.replace(".", " .")
     try:
-
-        if 'go to sleep' in query or 'quit' in query or 'exit' in query:
-            res = 'okay! have a good day.'
-
-        elif query.count('arleen') > 0:
-            res = "I am ready"
-            
-        elif 'what is your name' in query or "what's your name" in query:
-            res = 'My name is Arleen.'
-
-
-        elif  "write this down" in query or "remember that" in query:
+        
+        elif  "write this down" in query or "remember this" in query or "remember that" in query:
             file_name = "note.txt"
             query = query.replace("remember that", "")
             query = query.replace("write this down", "")
@@ -28,7 +18,7 @@ def reply(query):
             remvr = sm.retrieve_remeber()
             res = 'You told me, \n' + str(remvr)
 
-        elif 'time' in query:
+        elif 'what is the time' in query or 'what time is it' in query:
             time = sm.say_time()
             res = time
         elif 'brightness' in query:
@@ -49,7 +39,7 @@ def reply(query):
                 res = 'According to wikipedia, \n' + sm.wikipedia_search(query)
             else:
                 res = 'Sorry, I cannot find any information.'
-
+        #otherwise find answer from TransformerChatbot model
         else:
             res = conversation_model.chat(query)
 
