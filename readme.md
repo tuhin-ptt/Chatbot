@@ -1,5 +1,4 @@
 ## Transformer Chatbot
-This is a transformer based chatbot bulit and trained from scatch using Cornell movie dialog dataset.
-beam search is implemented to provide vareity in models response
-install dependencies described in requirements.txt and run 'flask run' command on command prompt
+This is transformer based chatbot built and trained from scratch using the Cornell movie dialog dataset.   In order to provide variety in the model response, beam search is implemented. Install the dependencies listed in requirements.txt, then type "flask run" at the command prompt to launch Chatbot app.
+</br>
 ![Chatbot Demo](chatbot.png)
